@@ -1,36 +1,34 @@
-*{
+* {
     margin: 0;
     padding: 0;
-    box-sizing : border-box;
+    box-sizing: border-box;
     font-family: 'Poppins';
-
 }
-body{
+body {
     background-color: antiquewhite;
 }
-
-.background{
-    width: 100% ;
+.background {
+    width: 100%;
     height: 100vh;
     background: url('med.jpeg') no-repeat;
     background-size: cover;
     background-position: center;
     filter: blur(8px);
 }
-.container{
+.container {
     position: absolute;
     top: 50%;
     left: 50%;
     width: 75%;
     height: 550px;
-    transform: translate(-50%,-50%);
-    background-image: url('med.jpeg') ;
+    transform: translate(-50%, -50%);
+    background-image: url('med.jpeg');
     background-size: cover;
     background-position: center;
     border-radius: 10px;
     margin-top: 20px;
 }
- .content{
+.content {
     position: absolute;
     top: 0;
     left: 0;
@@ -40,29 +38,29 @@ body{
     padding: 60px;
     color: black;
     display: flex;
-    justify-content:space-evenly;
+    justify-content: space-evenly;
     flex-direction: column;
 }
-.content h2{
+.content h2 {
     font-size: 40px;
 }
-.text-sci h2{
+.text-sci h2 {
     font-size: 40px;
     line-height: 1;
 }
-.text-sci h2 span{
-    font-size: 25px ;
+.text-sci h2 span {
+    font-size: 25px;
 }
- .logreg-box{
+.logreg-box {
     position: absolute;
     top: 0;
     right: 0;
-    
-    width:calc(100% - 58%) ;
+    overflow: hidden;
+    width: calc(100% - 58%);
     height: 100%;
-   
 }
 .logreg-box .form-box {
+    position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -73,21 +71,36 @@ body{
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
 }
-
-.form-box h2{
+.logreg-box .form-box.signup {
+    transform: translateX(0);
+    transition: transform 0.6s ease;
+    transition-delay: 0.7s;
+}
+.logreg-box.active .form-box.signup {
+    transform: translateX(430px);
+    transition-delay: 0s;
+}
+.logreg-box .form-box.signin {
+    transform: translateX(430px);
+    transition: transform 0.5s ease;
+    transition-delay: 0s;
+}
+.logreg-box.active .form-box.signin {
+    transform: translateX(0);
+    transition-delay: 0.7s;
+}
+.form-box h2 {
     font-size: 32px;
     text-align: center;
 }
-
-.form-box .input-box{
+.form-box .input-box {
     position: relative;
     width: 340px;
     height: 50px;
     border-bottom: 2px solid whitesmoke;
     margin: 30px 0;
 }
-
-.input-box input{
+.input-box input {
     width: 100%;
     height: 100%;
     background: transparent;
@@ -96,8 +109,7 @@ body{
     font-size: 18px;
     font-weight: 500;
 }
-
-.input-box label{
+.input-box label {
     position: absolute;
     top: 50%;
     left: 0;
@@ -105,14 +117,13 @@ body{
     font-size: 20px;
     font-weight: 650;
     pointer-events: none;
-    transition: .5s ease;
+    transition: 0.5s ease;
 }
-.input-box input:focus~label,
-.input-box input:valid~label{
+.input-box input:focus ~ label,
+.input-box input:valid ~ label {
     top: -5px;
 }
-
-.btn{
+.btn {
     width: 100%;
     height: 45px;
     background: whitesmoke;
@@ -123,16 +134,13 @@ body{
     font-size: 19px;
     font-weight: 500;
     color: black;
-
 }
-.form-box .login-register{
+.form-box .login-register {
     font-size: 14.5px;
     font-weight: 400;
     text-align: center;
 }
-
-.login-register p a{
+.login-register p a {
     font-weight: 400;
     text-decoration: none;
 }
-
