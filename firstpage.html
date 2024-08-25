@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <link rel="stylesheet" href="firstpage.css">
+</head>
+<body>
+    <div class="background"></div>
+    <header>
+        <h1>DrugVault</h1>
+    </header>
+    <main>
+        <div class="info-container">
+            <h4> Drug Inventory and supply chain Tracking system</h4>
+            <p>"Right Quantity of "Right Product" on "Right Place" on "Right Time" in "Right Condition" at "Right Cost" for "Right People"</p>
+            
+            <p>Register as:</p>
+
+            <div class="button-container">
+                <button onclick="goToPage('VENsignup.html')">Vendor</button>
+                <button onclick="goToPage('HOSsignup.html')">Consumer</button>
+            </div>
+        </div>
+    </main>
+    <script >
+        function goToPage(page) {
+    window.location.href = page;
+}
+
+    </script>
+</body>
+</html>
